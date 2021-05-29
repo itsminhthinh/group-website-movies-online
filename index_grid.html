@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Design Layout</title>   
+        <link rel="stylesheet" type="text/css" href="./css/grid.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+    </head>
+    <body>    	
+            <nav>
+                <!--logo--------------->
+                <a href="#" class="logo">
+                    <img src="images/logo.png"/>
+                </a>
+                <!--menu--btn----------------->
+                <input type="checkbox" class="menu-btn" id="menu-btn"/>
+                <label class="menu-icon" for="menu-btn">
+                    <span class="nav-icon"></span>
+                </label>
+                <!--menu-------------->
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Cartoon</a></li>
+                    <li><a href="#">romancetics</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Series korea</a></li>
+                </ul>
+                <!--search------------->
+                <div class="search">
+                    <input type="text" placeholder="Find Your Favourtie Movies"/>
+                    <!--search-icon----------->
+                    <i class="fas fa-search"></i>
+                </div>
+            </nav>
+<header>  
+   <!-- Container for the image gallery -->
+<div class="container-header">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="images/l-1.jpg" style="width:100%;height: 100%;">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="images/e_.jpg" style="width:100%;height: 100%;">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="images/l-7.jpg" style="width:100%;height: 100%;">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="images/l-4.jpg" style="width:100%;height: 100%;">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="images/avenger.jpg" style="width:100%;height: 100%;">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="images/l-6.jpg" style="width:100%;height: 100%;">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container-header">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row-header">
+      <div class="column-header">
+        <img class="demo cursor" src="images/l-1.jpg" style="width:100%;height: 100%;" onclick="currentSlide(1)" alt="Into darkness">
+      </div>
+      <div class="column-header">
+        <img class="demo cursor" src="images/e_.jpg" style="width:100%;height: 100%;" onclick="currentSlide(2)" alt="Endless">
+      </div>
+      <div class="column-header">
+        <img class="demo cursor" src="images/l-7.jpg" style="width:100%;height: 100%;" onclick="currentSlide(3)" alt="Rogue one">
+      </div>
+      <div class="column-header">
+        <img class="demo cursor" src="images/l-4.jpg" style="width:100%;height: 100%;" onclick="currentSlide(4)" alt="Toy story">
+      </div>
+      <div class="column-header">
+        <img class="demo cursor" src="images/avenger.jpg" style="width:100%;height: 100%;" onclick="currentSlide(5)" alt="Avenger">
+      </div>
+      <div class="column-header">
+        <img class="demo cursor" src="images/l-6.jpg" style="width:100%;height: 100%;" onclick="currentSlide(6)" alt="Star war">
+      </div>
+    </div>
+  </div>
+</header>
+<!--* javascript header--->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!--*********************************************************-->
+<div class="List">
+    <h6 style="text-align: center;background-color: black;font-size:40px;height: 50px;color:white;width: 100%;">List movie</h6>
+</div>
+
+<div class="container-aside">
+    <div class="sideleft">            
+              
+                <div class="content-new">
+                   <p>Avengers Endgame finally beats Avatar <br>
+                    to become the biggest movie of all time</p>
+                </div>
+                <video controls  poster="images/avenger.jpg" > 
+                    <source src="video/Avenger.mp4" type="video/mp4">
+                    <source src="video/Avenger.ogg" type="video/ogg">
+                  </video>
+                
+<div style="width: 280px;font-size: 13px;text-align: center;margin-left: 60px;margin-right: 0px;background-color:black;color: white;border-radius: 20px;">
+    <h3>Top 5 highest-grossing American movies of all time</h3>
+</div>
+<div class="content-new1">
+<div style="background-color: tan;border-radius: 30px;margin-bottom: 20px;height: 40px;text-align: left;margin-top: 20px;padding-top: 10px;padding-left: 5px;">
+    <p>1.Star Wars: The Force Awakens(2015):936.7 M$</p>
+</div>
+<div  style="background-color: rgb(219, 138, 31);border-radius: 30px;margin-bottom: 20px;height: 40px;text-align: left;padding-top: 10px;padding-left: 5px;">
+    <p>2.Avengers: Endgame (2019) : 858.370.000 M$</p>
+</div>
+<div  style="background-color: rgb(46, 163, 184);border-radius: 30px;margin-bottom: 20px;height: 40px;text-align: left;padding-top: 10px;padding-left: 5px;">
+    <p>3.Avatar (2009) : 760.500.000 M$</p>
+</div>
+<div  style="background-color: rgb(141, 187, 33);border-radius: 30px;margin-bottom: 20px;height: 40px;text-align: left;padding-top: 10px;padding-left: 5px;">
+    <p>4.Black Panther (2018) : 700.100.000 M$</p>
+</div>
+<div  style="background-color: rgb(33, 199, 60);border-radius: 30px;margin-bottom: 20px;height: 40px;text-align: left;padding-top: 10px;padding-left: 5px;">
+    <p>5.Avengers: Infinity War (2018) : 678.800.000 M$</p>
+</div>    
+</div>
+
+<video controls  poster="images/Kimetsu_no_Yaiba_Hinokami_Kepputan_Key_Visual.png" > 
+    <source src="video/Demon Slayer - Kimetsu no Yaiba - The Movie_ Mugen Train Official Trailer.mp4" type="video/mp4">
+    <source src="video/Demon Slayer - Kimetsu no Yaiba - The Movie_ Mugen Train Official Trailer.ogg" type="video/ogg">
+  </video>
+
+  
+  <div class="row-video2">
+   <div class="btn-group">
+    <button> Demon Slayer(Kimetsu no Yaiba) New Trailer!!!</button>
+    <button1>NEW</button1>
+   
+  </div>
+ 
+</div>
+<video controls  poster="images/poster-org-1619453214404-mortal.kombat.2021-poster.jpg" > 
+    <source src="video/yt1s.com - MORTAL KOMBAT Trailer 2021.mp4" type="video/mp4">
+    <source src="video/yt1s.com - MORTAL KOMBAT Trailer 2021.ogg" type="video/ogg">
+  </video>
+ <div class="row-video2">
+   <div class="btn-group">
+    <button>MORTAL KOMBAT Trailer 2021 </button>
+    <button1>NEW</button1>
+   
+  </div>
+</div>
+
+<video controls  poster="images/2011.jpg" > 
+    <source src="video/yt1s.com - Doraemon  Nobita Wedding   New Movie  Doraemon Memer.mp4" type="video/mp4">
+    <source src="video/yt1s.com - Doraemon  Nobita Wedding   New Movie  Doraemon Memer.ogg" type="video/ogg">
+  </video>
+ <div class="row-video2">
+   <div class="btn-group">
+    <button>Stand by Me Doraemon 2 </button>
+    <button1>NEW</button1>
+   
+  </div>
+</div>
+
+
+<video controls  poster="images/iceage.jpg" > 
+    <source src="video/Ice Age Trailer 1 2002.mp4" type="video/mp4">
+    <source src="video/Ice Age Trailer 1 2002.mp4" type="video/ogg">
+  </video>
+ <div class="row-video2">
+   <div class="btn-group">
+    <button>Ice Age Trailer COLLISION COURSE  </button>
+    <button1>NEW</button1>
+  </div>
+</div>
+
+
+
+<video controls  poster="images/titanic.jpg" > 
+    <source src="video/Titanic 3D Re-Release Official Trailer #1 - Leonardo DiCaprio, Kate Winslet Movie (2012) HD.mp4" type="video/mp4">
+    <source src="video/Titanic 3D Re-Release Official Trailer #1 - Leonardo DiCaprio, Kate Winslet Movie (2012) HD.ogg" type="video/ogg">
+  </video>
+ <div class="row-video2">
+   <div class="btn-group">
+    <button>Titanic 3D Re-Release Official Trailer </button>
+    <button1>NEW</button1>
+   
+  </div>
+</div>
+
+<video controls  poster="images/news-full-96560.jpg" > 
+    <source src="video/yt1s.com - MV CHEN첸XPunch펀치  Everytime l 태양의 후예 OST Part2_v720P.mp4" type="video/mp4">
+    <source src="video/yt1s.com - MV CHEN첸XPunch펀치  Everytime l 태양의 후예 OST Part2_v720P.ogg" type="video/ogg">
+  </video>
+ <div class="row-video2">
+   <div class="btn-group">
+    <button>Descendants of the sun Trailer </button>
+    <button1>NEW</button1>
+  </div>
+</div>
+
+<video controls  poster="images/a_100429009_m_601_zh-CN_260_360.jpg" > 
+    <source src="video/yt1s.com - Whats Wrong With Secretary Kim Full Trailer This September 24 on ABSCBN_720p.mp4" type="video/mp4">
+    <source src="video/yt1s.com - Whats Wrong With Secretary Kim Full Trailer This September 24 on ABSCBN_720p.ogg" type="video/ogg">
+  </video>
+ <div class="row-video2">
+   <div class="btn-group">
+    <button>Descendants of the sun Trailer </button>
+    <button1>NEW</button1>
+  </div>
+</div>
+
+
+</div>
+
+            </aside>
+    		<section class="main">
+    			<article>
+               
+
+                <div>
+                    <h6 style="background-color:peru;text-align:center;font-size:40px;color:;margin-left: 20px;margin-top:20px;width: 100%;">Action Movies</h6 >
+                </div>      
+                    <ul class="products1"style="margin-left:20px;width: 100%;background-color:sandybrown;">
+   
+                       <li><img src="images/m-5.jpg"style="width: 280px;height: 370px;border: radius 10px;margin-top:30px;" />
+                       <h4>Venom</h4>
+                       <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+   
+                       <li><img src="images/m-4.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                       <h4>Iron man 3</h4>
+                       <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                       
+                       <li><img src="images/m-6.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                       <h4>Aqua man</h4>
+                       <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+   
+                       <li><img src="images/m-3.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                       <h4>Inception</h4>
+                       <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+   
+                       <li><img src="images/l-6.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                           <h4>Star war the rise of skywalker</h4>
+                       <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+   
+                       <li><img src="images/m-7.jpeg"style="width: 280px;height: 370px;border: radius 10px;" />
+                           <h4>Jungle Cruise</h4>
+                       <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                       </ul>
+                <h6 style="background-color:royalblue;text-align:center;font-size:40px;color:;margin-left: 20px;margin-top:20px;width: 100%;">Cartoon Movies</h6 >
+                 <div>
+         
+                </div>      
+                          <ul class="products"style="margin-left:20px;width: 100%;background-color:rgb(37, 169, 221)">
+
+                    <li><img src="images/iceage.jpg"style="width: 280px;height: 370px;border: radius 10px;margin-top:30px;" />
+                    <h4>ICE ACE COLLISION COURSE</h4>
+                    <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+
+                    <li><img src="images/l-4.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                    <h4>TOY STORY 3</h4>
+                    <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                    
+                    <li><img src="images/l-3.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                    <h4>LES CROODS</h4>
+                    <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+
+                    <li><img src="images/l-5.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                    <h4>COCO</h4>
+                    <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+
+                    <li><img src="images/91tPeBoSuzL._RI_.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                        <h4>KUNG FU PANDA</h4>
+                    <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+
+                    <li><img src="images/2011.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                        <h4>Nobita and the New Steel Troops</h4>
+                    <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                    </ul>
+
+                   
+
+
+                           <div>
+                            <h6 style="background-color:grey;text-align:center;font-size:40px;color:;margin-left: 20px;margin-top:20px;width: 100%;">Horror Movies</h6 >
+                        </div>      
+                            <ul class="products2"style="margin-left:20px;width: 100%;background-color:rgb(150, 149, 160);">
+           
+                               <li><img src="images/annabelle.jpg"style="width: 280px;height: 370px;border: radius 10px;margin-top:30px;" />
+                               <h4>Annabelle</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/the texas.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>The texas chainsaw massacre</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                               
+                               <li><img src="images/juon.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>Ju-On</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/rottentail.pgn_.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>Rottentail</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/Ghost_Film_Poster.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                                   <h4>Ghost </h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/mummy_.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                                   <h4>mummy</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                               </ul>
+
+                     <div>
+                        <h6 style="background-color:pink;text-align:center;font-size:40px;color:;margin-left: 20px;margin-top:20px;width: 100%;">romancetics Movies</h6 >
+                    </div>      
+                        <ul class="products3"style="margin-left:20px;width: 100%;background-color:rgb(219, 179, 219)">
+       
+                           <li><img src="images/me_before_you._CB487236595_.jpg"style="width: 280px;height: 370px;border: radius 10px;margin-top:30px;" />
+                           <h4>Me before you</h4>
+                           <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+       
+                           <li><img src="images/titanic.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                           <h4>Titanic</h4>
+                           <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                           
+                           <li><img src="images/Love-aaj-kal-2.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                           <h4>Love-aaj-kal-2</h4>
+                           <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+       
+                           <li><img src="images/the vom.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                           <h4>the vow</h4>
+                           <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+       
+                           <li><img src="images/e_.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>Endless</h4>
+                           <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+       
+                           <li><img src="images/ly.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>Leap year</h4>
+                           <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                           </ul>
+                            
+                           <div>
+                            <h6 style="background-color:rgb(165, 41, 47);text-align:center;font-size:40px;color:;margin-left: 20px;margin-top:20px;width: 100%;">romancetics Movies</h6 >
+                        </div>      
+                            <ul class="products3"style="margin-left:20px;width: 100%;background-color:rgb(231, 128, 128);">
+           
+                               <li><img src="images/content_crash_landing_on_you.jpg"style="width: 280px;height: 370px;border: radius 10px;margin-top:30px;" />
+                               <h4>Crash Landing on You</h4>
+                               <strong> <a style="color:rgb(33, 16, 185)" href="#">Play</a></strong>
+           
+                               <li><img src="images/a_100429009_m_601_zh-CN_260_360.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>What is wrong the secretary kim</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                               
+                               <li><img src="images/news-full-96560.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>Descendants of the sun</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/dy.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                               <h4>My secret romancetics</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/content_Kingdom_2.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                                   <h4>Kingdom 2</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+           
+                               <li><img src="images/content_My_holo_love.jpg"style="width: 280px;height: 370px;border: radius 10px;" />
+                                   <h4>My Holo Love</h4>
+                               <strong> <a style="color:rgb(33, 16, 185);" href="#">Play</a></strong>
+                               </ul>
+    
+                        </div>         
+                    </div> 
+                    
+                    
+                </div>             
+            </div> 
+    	</article>
+    </section>
+</body>
+        <footer class="footer1">
+            <div>
+            <div class="container1">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">SOUND TACK</a></li>
+                            <li><a href="#">DVD</a></li>
+                            <li><a href="#">VIDEO</a></li>
+                            <li><a href="#">CENIMA</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            
+
+
+  
+    
+
+       </footer> 
+</html>
